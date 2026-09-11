@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developers.reddit.com/schema/config-file.v1.json",
+  "name": "bretts-mod-queue",
+  "title": "Brett's Mod Queue",
+  "description": "Moderation queue viewer and processor — approve, remove, report, and track queue activity",
+  "requiredPermissions": ["read", "submit", "modposts"],
+  "triggers": {
+    "onAppInstall": "/internal/triggers/on-app-install",
+    "onCommentCreate": "/internal/triggers/on-comment-create",
+    "onPostCreate": "/internal/triggers/on-post-create"
+  },
+  "server": {
+    "directory": "server"
+  },
+  "clientPages": {
+    "App": {
+      "jsx": "client/App.jsx"
+    }
+  },
+  "resources": {
+    "css": ["styles.css"]
+  }
+}
